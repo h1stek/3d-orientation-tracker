@@ -1,0 +1,12 @@
+#!/usr/bin/gnuplot -p
+
+set datafile separator " "
+set title "IMU plotter"
+set xlabel "time"
+set yrange [-2:2]
+set grid
+#plot "cavendish.data" title ""
+plot "data.dat" using 1:2 with lines title "w"  
+#, "data-output.csv" using 0:2 title "XZ" pointsize 2 pointtype 7, "data-output.csv" using 1:2 title "YZ" pointsize 2 pointtype 7
+pause 1
+reread
