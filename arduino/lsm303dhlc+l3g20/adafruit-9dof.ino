@@ -104,21 +104,22 @@ void loop()
 	
 	if (time_start - time_print > INTERVAL) {
 #ifdef PLOT_MODE
-	Serial.print(time);
-	Serial.print(" ");
+		Serial.print(time);
+		Serial.print(" ");
+		time+=1;
 #endif
-	time_print = time_start;	
 #if defined(PRINT_ORIENTATION) && defined(USE_EULERS)
-	print(roll, pitch, yaw);
+		print(roll, pitch, yaw);
 #elif defined(PRINT_ORIENTATION)
-	print(q.x, q.y, q.z);
+		print(q.x, q.y, q.z);
 #elif defined(PRINT_DATA_ACCEL)
-	print(ax, ay, az);
+		print(ax, ay, az);
 #elif defined(PRINT_DATA_MAG)
-	print(mx, my, mz);
+		print(mx, my, mz);
 #elif defined(PRINT_DATA_GYRO)
-	print(gx, gy, gz);
+		print(gx, gy, gz);
 #endif
+		time_print = time_start;	
 	}
 
 #if defined(PRINT_ORIENTATION) && defined(USE_EULERS)
