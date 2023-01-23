@@ -1,0 +1,5 @@
+#! /bin/bash
+
+echo -n > data.out
+minicom -C data.out -D /dev/ttyACM0
+tools/data-plotter
