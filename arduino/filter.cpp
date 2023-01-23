@@ -61,9 +61,15 @@ quat update_filter(float ax, float ay, float az, float gx, float gy, float gz,
 
 	// convert corrected gyroscope data to quaternion and integrate to 
 	// previous orientation quaternion by multiplication 
+
+#if 1
 	gyro_quat = gyro_to_quat(&orientation_last, gyro_vec_corrected.x,
 				gyro_vec_corrected.y, gyro_vec_corrected.z, dt);
-	
+#else
+	gyro_quat = gyro_to_quat(&orientation_last, gyro_vec.x,
+				gyro_vec.y, gyro_vec.z, dt);
+#endif	
+
 	orientation = gyro_quat;
 	orientation_last = gyro_quat;
 	

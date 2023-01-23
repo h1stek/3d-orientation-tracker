@@ -15,7 +15,7 @@
 #include <Wire.h>
 #include "filter.h"
 
-//#define PLOT_MODE
+// #define PLOT_MODE
 
 #ifndef PLOT_MODE
 #define INTERVAL 0
