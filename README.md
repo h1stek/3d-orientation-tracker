@@ -1,6 +1,6 @@
 # 3D Attitude Visualizer
 
-3D attitude visualizer with [Adafruit 9-DOF board](https://www.adafruit.com/product/1714) + Arduino UNO written in C/C++.
+3D attitude visualizer with [Adafruit 9-DOF board](https://www.adafruit.com/product/1714) + Arduino UNO written in C++.
 
 ![](https://github.com/stepank1/imu-visualizer/blob/main/demo.gif)
 
